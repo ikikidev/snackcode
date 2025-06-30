@@ -1,0 +1,155 @@
+/* Estilo cybercute para SnackCode */
+
+body {
+  background: linear-gradient(to bottom, #fef9ff, #f1f6ff);
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, .fw-bold {
+  font-weight: 800;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Tarjetas de clases */
+.clase-card {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 2px dashed #ffe3fc;
+}
+
+.clase-card:hover {
+  transform: scale(1.03);
+  background-color: #fff6fa;
+  border-color: #fdd0f8;
+}
+
+/* Modal estilo cybercute */
+
+.modal-contenido code {
+  display: block;
+  background: #fafafa;
+  padding: 1rem;
+  border-left: 4px solid #ffb3ec;
+  color: #d63384;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.cerrar {
+  float: right;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-weight: bold;
+}
+
+.modal-cybercute {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none; /* Se oculta por defecto */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-cybercute.show {
+  display: flex; /* Se muestra cuando tiene la clase show */
+}
+
+.modal-contenido {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  background-color: #ffb3ec;
+  border-color: #ffb3ec;
+}
+
+#btn-top.show {
+  display: flex;
+  opacity: 1;
+}
+
+#btn-top:hover {
+  transform: scale(1.1);
+  background-color: #ff70a6; /* pastel rosa cybercute */
+  border-color: #ff70a6;
+}
+
+.banner-construccion {
+  background: linear-gradient(90deg, 
+    #ffcbf2,  /* rosa */
+    #f3c4fb,  /* lila */
+    #c1fdff,  /* azul pastel */
+    #caffbf,  /* verde */
+    #fdffb6,  /* amarillo */
+    #ffd6a5,  /* naranja */
+    #ffadad   /* rojo pastel */
+  );
+  background-size: 200% auto;
+  color: #333;
+  font-size: 1.1rem;
+  animation: shimmer 8s linear infinite;
+  border-bottom: 3px dashed #ffa3b1;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.btn-cybercute-docs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+  color: #4b0082;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px dashed #c084fc;
+  box-shadow: 0 0 6px rgba(200, 150, 255, 0.3);
+}
+
+.btn-cybercute-docs:hover {
+  background: linear-gradient(90deg, #fbc2eb, #a6c1ee);
+  color: #7c3aed;
+  box-shadow: 0 0 12px #e9d5ff;
+  transform: scale(1.05);
+}
+

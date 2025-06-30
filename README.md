@@ -1,2 +1,83 @@
-# snackcode
-🍬 Mini dosis de código para devs con hambre de aprender. Una guía interactiva, visual y accesible para aprender HTML, CSS, Bootstrap y jQuery desde cero, con ejemplos dulces, lightboxes cuquis y ejercicios prácticos. Perfecta para estudiantes de desarrollo web, docentes o personas autodidactas con estilo 💻🌈
+
+# 🍬 SnackCode
+
+> 🚧 **SnackCode está en construcción**  
+> ... ¡pronto habrá más secciones! 🍭✨
+---
+
+![Bootstrap](https://img.shields.io/badge/bootstrap-5\.3-blueviolet?style=for-the-badge&logo=bootstrap&logoColor=fff)
+![Cybercute](https://img.shields.io/badge/estilo-cybercute-pink?style=for-the-badge)
+![Estado](https://img.shields.io/badge/estado-en%20construcci%C3%B3n-ffcce0?style=for-the-badge)
+![Licencia](https://img.shields.io/badge/licencia-MIT-ccf5ff?style=for-the-badge)
+
+> **SnackCode** es una mini web educativa para aprender front de forma visual e interactiva 💜
+
+🍬 Mini dosis de código para devs con hambre de aprender. Una guía interactiva, visual y accesible para aprender HTML, CSS, Bootstrap y jQuery desde cero, con ejemplos, lightboxes y ejercicios prácticos. Perfecta para estudiantes de desarrollo web, docentes o personas autodidactas con estilo 💻🌈
+
+---
+
+## ✨ ¿Qué incluye?
+
+### ✅ Cheatsheet de Bootstrap
+
+- Tarjetas con clases organizadas por categoría (botones, texto, fondos, flexbox…)
+- Modal informativo con:
+  - Descripción clara
+  - Ejemplo visual
+  - Código copiable
+
+### 🎈 Botón flotante interactivo
+
+- Acceso rápido para volver al principio de la página
+- Animación de globo flotante con transición suave
+
+### 📘 Acceso directo a la documentación oficial
+
+- Enlace destacado a la documentación de Bootstrap
+- Se integra visualmente con el resto de la interfaz
+
+### 🌈 Estética agradable
+
+- Paleta pastel, emojis y tipografía amigable
+- Gradientes suaves y detalles visuales para un aprendizaje más atractivo
+
+---
+
+## 📂 Estructura del proyecto
+
+```bash
+SnackCode/
+├── assets/
+│   └── logo/           # Logotipo en PNG o SVG
+├── css/
+│   └── style.css       # Estilos personalizados (ciberpastel)
+├── js/
+│   └── main.js         # Generación dinámica de tarjetas y modales
+├── data/
+│   └── bootstrap_todas_classes.json  # Clases con categoría, descripción y ejemplo
+└── index.html
+```
+
+---
+
+## 🧠 Próximas mejoras
+
+- 🔍 Buscador por nombre de clase
+- 🎯 Quizzes interactivos sobre Bootstrap
+- 📎 Botón para copiar código
+- 🧩 Playground para probar clases en vivo
+- 🎉 Confeti al desbloquear contenido
+- 📚 Inclusión progresiva de HTML, CSS y jQuery
+
+---
+
+## 📲 Sígueme
+
+Hecho con 💜 por [@ikikidev](https://github.com/ikikidev)  
+[GitHub](https://github.com/ikikidev) · [Instagram](https://instagram.com/ikikidev) · [Ko-fi](https://ko-fi.com/ikikidev) · [LinkedIn](https://www.linkedin.com/in/victoria-n-9b8423180/)
+
+---
+
+## 📜 Licencia
+
+MIT License – Libre para aprender, modificar y compartir.
