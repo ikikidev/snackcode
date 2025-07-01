@@ -191,6 +191,39 @@ header p {
   transform: translateY(-20px);
 }
 
+.titulos-tablas-recursos{
+  color: #b898ff;
+}
 
+#recurso a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #6c63ff; /* morado pastel bonito */
+  border-bottom: 2px dashed #d0c3ff;
+  transition: all 0.3s ease;
+}
 
+#recurso a:hover {
+  color: #4b35d0;
+  background-color: #f3f0ff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  text-decoration: none;
+}
+
+#recurso a:not(.btn) {
+  font-weight: 600;
+  text-decoration: none;
+  color: #6c63ff;
+  border-bottom: 2px dashed #d0c3ff;
+  transition: all 0.3s ease;
+}
+
+#recurso a:not(.btn):hover {
+  color: #4b35d0;
+  background-color: #f3f0ff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  text-decoration: none;
+}
 

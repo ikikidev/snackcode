@@ -47,6 +47,27 @@
 - El texto coincidente se resalta con un color rosa pastel para facilitar la identificación visual.  
 - Incluye mensaje "sin resultados" en caso de no encontrar coincidencias.
 
+Perfecto. Aquí tienes un fragmento listo para incluir en tu `README.md`, documentando la nueva sección de **Recursos para desarrolladores** en SnackCode:
+
+### 📚 Recursos para desarrolladores
+
+Hemos añadido una nueva sección accesible desde la navegación principal:
+🔗 [`recursos.html`](./recursos.html)
+
+En esta sección encontrarás tablas categorizadas con enlaces útiles para diseñadores y devs, incluyendo:
+
+| Categoría              | Contenido destacado                             |
+| ---------------------- | ----------------------------------------------- |
+| 🖼️ PNGs Transparentes | StickPNG, PNGTree, CleanPNG...                  |
+| 📷 Imágenes de Stock   | Unsplash, Pexels, Freepik, StockVault...        |
+| 🖌️ Mockups            | MockupWorld, LS Graphics, Unblast...            |
+| ✏️ Ilustraciones       | Humaaans, unDraw, Blush, Ouch, DrawKit...       |
+| 🔤 Tipografías         | Google Fonts, DaFont, FontShare...              |
+| 🎨 Paletas de color    | Coolors, Adobe Color, Khroma, Flat UI Colors... |
+| 🧩 Iconos              | Icons8, IconSax, Flaticon, The Noun Project...  |
+| 📦 Packs 3D            | 3DIcons, ShapeFest, Icons8 3D, UI8...           |
+| 💡 Inspiración diseño  | Mobbin, Behance, Awwwards, Muzli, Pinterest...  |
+
 ---
 
 ## 📂 Estructura del proyecto
