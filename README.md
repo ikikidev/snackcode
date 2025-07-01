@@ -41,6 +41,12 @@
 - Paleta pastel, emojis y tipografía amigable
 - Gradientes suaves y detalles visuales para un aprendizaje más atractivo
 
+### 🔎 Buscador interactivo que permite filtrar las tarjetas por nombre de clase, descripción o categoría. 
+
+- Oculta dinámicamente las tarjetas y los títulos de categoría (`<h3>`) que no contienen coincidencias.  
+- El texto coincidente se resalta con un color rosa pastel para facilitar la identificación visual.  
+- Incluye mensaje "sin resultados" en caso de no encontrar coincidencias.
+
 ---
 
 ## 📂 Estructura del proyecto
@@ -62,7 +68,6 @@ SnackCode/
 
 ## 🧠 Próximas mejoras
 
-- 🔍 Buscador por nombre de clase
 - 🎯 Quizzes interactivos sobre Bootstrap
 - 📎 Botón para copiar código
 - 🧩 Playground para probar clases en vivo
