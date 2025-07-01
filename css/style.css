@@ -153,3 +153,20 @@ header p {
   transform: scale(1.05);
 }
 
+/* Estilo del buscador */
+.resaltado {
+  background-color: #f7c5ec; /* rosa pastel */
+  border-radius: 4px;
+  padding: 0 3px;
+}
+.pastel-border {
+  border: 2px solid #f7c5ec;
+  transition: 0.3s ease;
+}
+
+.pastel-border:focus {
+  border-color: #f18ecf;
+  box-shadow: 0 0 0 0.2rem rgba(241, 142, 207, 0.25);
+}
+
+

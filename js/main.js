@@ -124,4 +124,68 @@ btnTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Buscador de clases
+const buscador = document.getElementById("buscador");
+
+const sinResultados = document.createElement("p");
+sinResultados.id = "sin-resultados";
+sinResultados.className = "text-muted mt-4 text-center";
+sinResultados.style.display = "none";
+sinResultados.innerText = "😢 No se encontraron clases con ese término.";
+document.getElementById("cheatsheet-grid").after(sinResultados);
+
+buscador.addEventListener("input", function (e) {
+  const termino = e.target.value.toLowerCase();
+  const tarjetas = document.querySelectorAll(".clase-card");
+  let coincidencias = 0;
+
+  tarjetas.forEach((card) => {
+    const col = card.closest(".col-md-4");
+
+    // Limpiar resaltados anteriores
+    ["h5", "p"].forEach((tag) => {
+      const el = card.querySelector(tag);
+      if (el) {
+        el.innerHTML = el.textContent;
+      }
+    });
+
+    const titulo = card.querySelector("h5")?.textContent.toLowerCase() || "";
+    const descripcion = card.querySelector("p")?.textContent.toLowerCase() || "";
+    const categoria = card.closest(".row")?.previousElementSibling?.textContent.toLowerCase() || "";
+
+    if (
+      titulo.includes(termino) ||
+      descripcion.includes(termino) ||
+      categoria.includes(termino)
+    ) {
+      col.style.display = "block";
+      coincidencias++;
+
+      // Resaltar
+      ["h5", "p"].forEach((tag) => {
+        const el = card.querySelector(tag);
+        if (el && termino) {
+          const regex = new RegExp(`(${termino})`, "gi");
+          el.innerHTML = el.textContent.replace(regex, `<span class="resaltado">$1</span>`);
+        }
+      });
+    } else {
+      col.style.display = "none";
+    }
+  });
+
+  // Ocultar categorías sin tarjetas visibles
+  const categorias = document.querySelectorAll("#cheatsheet-grid h3");
+  categorias.forEach((h3) => {
+    const row = h3.nextElementSibling;
+    const visibles = row.querySelectorAll(".col-md-4:not([style*='display: none'])");
+    h3.style.display = visibles.length > 0 ? "block" : "none";
+    row.style.display = visibles.length > 0 ? "flex" : "none";
+  });
+
+  // Mostrar mensaje si no hay ninguna coincidencia
+  sinResultados.style.display = coincidencias === 0 ? "block" : "none";
+});
+
 
