@@ -1,3 +1,4 @@
+
 function mostrarModal(id) {
   const modal = document.getElementById('modal-' + id);
   if (modal) {
@@ -93,20 +94,26 @@ fetch("data/bootstrap_todas_clases.json")
         modal.id = `modal-${item.id}`;
         modal.className = "modal-cybercute";
 
-        modal.innerHTML = `
-          <div class="modal-contenido">
-            <button class="cerrar btn btn-sm btn-outline-secondary" onclick="cerrarModal('${item.id}')">✖</button>
-            <h2>${item.title}</h2>
-            <p>${item.description}</p>
-            <div class="p-3 border rounded bg-light mb-2">${item.example}</div>
-            <code>${item.example.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>
-          </div>
-        `;
+       modal.innerHTML = `
+        <div class="modal-contenido">
+          <button class="cerrar btn btn-sm btn-outline-secondary" onclick="cerrarModal('${item.id}')">✖</button>
+          <h2>${item.title}</h2>
+          <p>${item.description}</p>
+          <div class="p-3 border rounded bg-light mb-2">${item.example}</div>
+          <button class="btn btn-outline-primary btn-sm my-2 copiar-codigo" 
+                  data-code="${item.example.replace(/"/g, '&quot;')}">
+            📋 Copiar
+          </button>
+          <code>${item.example.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>
+        </div>
+      `;
+
 
         document.body.appendChild(modal);
       });
 
       container.appendChild(row);
+      
     }
   });
 
@@ -187,5 +194,23 @@ buscador.addEventListener("input", function (e) {
   // Mostrar mensaje si no hay ninguna coincidencia
   sinResultados.style.display = coincidencias === 0 ? "block" : "none";
 });
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("copiar-codigo")) {
+    const code = e.target.getAttribute("data-code");
+    if (!code) return;
+
+    navigator.clipboard.writeText(code).then(() => {
+      // Mostrar alerta visual
+      const alerta = document.getElementById("alerta-copiado");
+      alerta.classList.add("mostrar");
+
+      setTimeout(() => {
+        alerta.classList.remove("mostrar");
+      }, 2000);
+    });
+  }
+});
+
 
 

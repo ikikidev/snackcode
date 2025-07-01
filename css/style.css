@@ -169,4 +169,28 @@ header p {
   box-shadow: 0 0 0 0.2rem rgba(241, 142, 207, 0.25);
 }
 
+.alerta-copiado {
+  position: fixed;
+  bottom:10%;
+  right: 5%;
+  background: #ffd6f5;
+  color: #5e2b5e;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #f5b5e7;
+  z-index: 10000; /* Más alto que .modal */
+  opacity: 0;
+  transform: translateY(0);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.alerta-copiado.mostrar {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+
+
 
